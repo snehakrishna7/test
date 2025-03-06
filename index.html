@@ -1,0 +1,439 @@
+<html lang="en" class="hydrated"><head>
+    <meta charset="UTF-8"><style data-styles="">ion-icon{visibility:hidden}.hydrated{visibility:inherit}</style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fylo Landing Page</title>
+    
+  </head>
+  <style>
+    *,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    font-family: "open Sans",sans-serif;
+    font-family: "Raleway",sans-serif;
+    --padd-in:2rem
+}
+footer{
+      background-color:hsl(243, 88%, 13%) ;
+      color: white;
+      width: 100%;
+      padding-block:2rem;
+      padding-inline:var(--padd-in) ;
+}
+.phone::before{
+    content: url(images/icon-phone.svg);
+    vertical-align: middle;
+    margin-right: 1rem;
+
+}
+.mail::before{
+    content: url(images/icon-email.svg);
+    vertical-align: middle;
+    margin-right: 1rem;
+
+}
+footer img{
+    z-index: 12;
+}
+p{
+    margin: 0;
+}
+li{
+    font-size: 1.57em;
+}
+.icon{
+    list-style-type: none;
+    width: 40px;
+    display: grid;
+    place-content: center;
+    height: 40px;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+
+.itm li{
+    cursor: pointer;
+}
+.itm li:hover{
+    opacity: 0.7;
+}
+footer li,footer p{
+    cursor: pointer;
+    transition: all 0.2s;
+}
+footer li:hover,footer p:hover{
+    color:rgb(13, 33, 82) ;
+}
+
+button:hover,.arrow:hover{
+    opacity: 0.6;
+}
+.socials{
+    display: flex;
+    gap: 0.7rem;
+    width: 240px;
+    margin:0 auto ;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    margin-block:1.5rem ;
+}
+@media screen and (min-width:784px) {
+    footer{
+        padding-top: 4rem;
+    }
+    footer:first-child img {
+        margin-bottom: 3rem;
+
+    }
+    .des{
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-start;
+        gap: 3.6rem;
+    }    
+    .about{
+        margin-top: 0;
+    }
+    .socials{
+        margin: 0;
+    }
+}
+
+
+.text{
+    text-align: center;
+    line-height: 2rem;
+}
+input{
+    background-color: white;
+    padding-block: 1rem;
+    outline: 0;
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+    width: 248px;
+    /* border: 0; */
+}
+
+button{
+padding-block: 1rem;
+cursor:pointer;
+width: 248px;
+outline: 0;
+border: 0;
+text-transform: capitalize;
+}
+.input{
+    display: grid;
+    place-content: center;
+    margin: 2rem auto 0rem;
+    outline: 0;
+    border: 0;
+}
+.btn1{
+    background-color: rgb(32,81,208);
+    color: white;
+}
+.btn2{
+    background-color: rgb(46,100,241);
+}
+.grid-2{
+display: grid;
+}
+@media screen and (min-width:784px) {
+    .grid-2{
+        grid-template-columns: 380px 1fr;
+    }
+    .text{
+    text-align: left;
+    line-height: 2rem;
+    }
+    input{
+    width:140% ;
+    }
+    .input{
+        width: 100%;
+    }
+    
+}
+.call{
+    background-color: rgb(88,89,137);
+    padding-inline:var(--padd-in) ;
+    padding-block:2rem 4rem ;
+    color: white;
+}
+.call a{
+    color: white;
+
+}
+.three-p{
+    margin-bottom: 1.7rem;
+}
+.arrow{
+    cursor: pointer;
+color: #4da58c;
+display: inline-block;
+margin-inline:auto ;
+border-bottom: 1px solid #4da58c;
+}
+.arrow::after{
+    content:url(images/icon-arrow.svg);
+    display: inline-block;
+    margin-left: 0.7rem;
+}
+.quote::before{
+content: url(images/icon-quotes.svg);
+display: block;
+}
+.id{
+    font-size: 0.9rem;
+}
+.pro{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    /* justify-content:  center; */
+}
+.main{
+    text-align: center;
+}
+.card{
+    border: 1px solid rebeccapurple;
+    max-width: 304px;
+    padding: 2rem;
+}
+.person{
+    margin-right: 0.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.about h4{
+margin-top: 5rem;
+}
+    
+.pad{
+    padding:var(--padd-in) ;
+}
+.card p,.card h4{
+    margin: 0;
+}
+.card .about{
+    gap: 0;
+}
+.res{
+    width: 100%;
+}
+.green{
+    width: 400px;
+    margin: 2rem auto;
+}
+.one{
+    grid-area: one;
+}
+.two{
+    grid-area: two;
+}
+.th{
+    grid-area: th;
+}
+
+.center{
+    text-align: center;
+}
+main{
+    padding-inline: var(--padd-in);
+    display: grid;
+}
+
+header img{
+    width:90px;
+    height: 30px;
+}
+@media screen and (min-width:764px) {
+    header img{
+        width: auto;
+    }
+    .card{
+        max-width: 360px;
+    }
+    .o{
+order: 2;
+    }
+    main input{
+        width:70%;
+
+    }
+    main button{
+        align-self: flex-start;
+    }
+    .fl{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    main{
+        grid-template-columns: 60% 40%;
+    }
+    .main{
+        text-align: left;
+    }
+    .grid-c{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: 
+        "two two one one"
+        "th . one one";
+    }
+    .one{
+        margin-top: 4rem;
+        grid-row: 1/span 2;
+    }
+    
+.center{
+    text-align: left;
+}
+    
+}
+
+header{
+    padding-left:  var(--padd-in);
+    padding-right: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li{
+    list-style-type:none ;
+}
+header li{
+    font-size: 1.1rem;
+}
+.itm{
+    display: flex;
+    gap: 1rem;
+}
+.itm{
+    gap: 10px;
+}
+@media screen and (min-width:784px) {
+.itm{
+    gap:3rem;
+}
+header{
+    padding-right: 2rem;
+}
+    
+}
+header ul{
+    padding-left: 0.1rem;
+}
+  </style>
+  <body>
+    <header>
+      <img src="/image/1st.png" alt="1st" width="80px" height="50px">
+      <nav>
+        <ul class="itm">
+          <li>Features</li>
+          <li>Team</li>
+          <li>Sign in</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <img class="res o" src="/image/2nd.png" alt="2nd">
+      <div class="center">
+        <h1>All your files in one secure location, accessible anywhere.</h1>
+        <p>
+          Fylo stores your most important files in one secure location. Access
+          them wherever you need, share and collaborate with friends, family,
+          and co-workers.
+        </p>
+        <div class="input fl">
+          <input type="email" name="email" id="em" placeholder="email@example.com">
+          <button class="btn1"><a>get started for free</a></button>
+        </div>
+      </div>
+    </main>
+    <section class="grid-c pad">
+      <img class="res one" src="/image/3rd.png" alt="3rd">
+      <div class="two">
+        <h2 class="text main">Stay productive, wherever you are</h2>
+        <p class="three-p">
+          Never let location be an issue when accessing your files. Fylo has you
+          covered for all of your file storage needs.
+        </p>
+        <p class="three-p">
+          Securely share files and folders with friends, family and colleagues
+          for live collaboration. No email attachments required!
+        </p>
+      </div>
+      <div class="green th">
+        <h3 class="arrow text">See how Fylo works</h3>
+        <div class="card">
+          <p class="quote">
+            Fylo has improved our team productivity by an order of magnitude.
+            Since making the switch our team has become a well-oiled
+            collaboration machine.
+          </p>
+          <div class="pro">
+            <img class="person" src="/image/4th.png" alt="4th">
+            <div>
+              <h4>Kyle Burton</h4>
+              <p class="id">Founder &amp; CEO,Huddle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="call grid-2">
+      <div class="text">
+        <h2>Get early access today</h2>
+        <p>
+          It only takes a minute to sign up and our free starter tier is
+          extremely generous. If you have any questions, our support team would
+          be happy to help you.
+        </p>
+      </div>
+      <div class="input">
+        <input type="email" name="email" id="em" placeholder="email@example.com">
+        <button class="btn2"><a>get started for free</a></button>
+      </div>
+    </section>
+
+    <footer>
+      <img src="/image/5th.png" alt="" width="140px" height="50pm" style="margin-bottom: 15px;">
+      <div class="des">
+        <div class="about">
+          <p class="phone">Phone: +1-543-123-4567</p>
+          <p class="mail">example@fylo.com</p>
+        </div>
+        <div class="about">
+          <p>About</p>
+          <p>jobs</p>
+          <p>press</p>
+          <p>Blog</p>
+        </div>
+        <div class="about">
+          <p>Contact us</p>
+          <p>Terms</p>
+          <p>Privacy</p>
+        </div>
+        <ul class="socials">
+          <li class="icon"><ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon></li>
+          <li class="icon"><ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon></li>
+          <li class="icon"><ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon></li>
+        </ul>
+      </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+
+</body></html>
