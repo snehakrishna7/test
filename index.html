@@ -1,0 +1,194 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Rating Component</title>
+    
+  </head>
+  <style>
+    *,*::after,*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+/* .th{
+    width: 100%;
+} */
+
+.th img{
+    width: 150px;
+    display: block;
+    margin:2px auto;
+    border-radius: 5px;
+}
+body{
+    font-size: 1.5rem;
+    font-family: 'Overpass',sans-serif;
+    background-color: hsl(216, 12%, 8%);
+    color: white;
+    display: grid;
+    height: 90vh;
+    place-content: center;
+}
+#card p{
+    opacity: 0.7;
+    line-height: 2.5rem;
+}
+
+#card{
+    width: 350px;
+    margin: auto;
+    border-radius: 12px;
+    padding: 2rem;
+    background-color: rgb(32,41,51);
+}
+@media screen and (min-width:720px) {
+    #card{
+    width: 375px;
+    }
+}
+button{
+    width: 100%;
+    font-family: 'Overpass',sans-serif;
+
+    padding: 1rem;
+    border-radius: 16px;
+    background-color: rgb(251,118,20);
+    color: white;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    margin-top: 1rem;
+}
+.val .circle{
+    cursor: pointer;
+
+}
+.val .circle:hover{
+    background-color: rgb(251,118,20);
+color: white;
+}
+button:hover{
+    background: white;
+    color: rgb(251,118,20);
+}
+img{
+    width: 60%;
+}
+.val{
+    display: flex;
+    margin-block:1rem ;
+    /* gap: auto; */
+    justify-content: space-between;
+    padding-inline-end:2rem ;
+    padding-inline-start:0 ;
+
+}
+.circle{
+    background-color: rgb(37,49,54);
+    width: 4rem;
+    height: 4rem;
+    /* padding: 4px 6px; */
+    display: inline-flex;
+    justify-content: center;
+     align-items: center;
+    border-radius: 100%;
+    transition: all 0.2s;
+}
+.w{
+    font-weight: 700;
+}
+.se:hover{
+    background-color: rgb(127,135,149);
+}
+.se{
+    background-color: rgb(127,135,149);
+}
+.center
+{
+    text-align: center;
+}.cont{
+    background-color: rgb(37,49,54);
+    padding:0.5rem 0.4rem;
+    font-size: 1.5rem;
+    color: rgb(251,118,20);
+    margin:1.3rem auto;
+    border-radius: 8px;
+    width: 180px;
+}
+  </style>
+  <body>
+    <div id="card">
+      <span class="circle">
+        <img src="https://thumbs.dreamstime.com/b/red-star-icon-black-background-abstract-127568987.jpg" alt="">
+      </span>
+      <h2>How did we do?</h2>
+      <p>
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <div class="val">
+        <span class="circle">1</span>
+        <span class="circle">2</span>
+        <span class="circle">3</span>
+        <span class="circle">4</span>
+        <span class="circle">5</span>
+      </div>
+      <button>Submit</button>
+    </div>
+    <!-- <div id="card">
+      <div class="th">
+        <img src="/image/starnext.png" alt="" />
+      </div>
+      <div class="cont">
+        <span>You selected <span id="point"></span> out of 5</span>
+      </div>
+
+      <h3 class="center w">Thank you!</h3>
+      <p class="center">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
+    </div> -->
+  
+</body>
+<script>
+    let selected;
+let box = document.querySelector(".val");
+let ar = box.querySelectorAll(".circle");
+let btn = document.querySelector("button");
+let con = document.getElementById("card");
+btn.addEventListener("click", show);
+function show() {
+  if (!selected) {
+    alert("Please Select a number");
+    return;
+  }
+  con.innerHTML = `<div class="th">
+  <img src="/image/starnext.png" alt="" />
+</div>
+<div class="cont">
+  <span>You selected <span id="point"> ${selected.textContent}</span> out of 5</span>
+</div>
+
+<h3 class="center w">Thank you!</h3>
+<p class="center">
+  We appreciate you taking the time to give a rating. If you ever need
+  more support, don’t hesitate to get in touch!
+</p>`;
+}
+ar.forEach((e) => {
+  e.addEventListener("click", select);
+});
+function select(e) {
+  if (selected) {
+    selected.classList.toggle("se");
+  }
+  selected = e.target;
+  selected.classList.toggle("se");
+}
+
+</script>
+</html>
